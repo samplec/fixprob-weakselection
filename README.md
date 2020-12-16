@@ -1,6 +1,8 @@
 # fixprob-weakselection
 This code contains various MATLAB files to generate the data in the manuscript: "Fixation probabilities in graph-structured populations under weak selection" by Benjamin Allen, Christine Sample, Patricia Steinhagen, Julia Shapiro, Matthew King, Timothy Hedspeth, Megan Goncalves
 
+[doi:10.5281/zenodo.4327979](https://doi.org/10.5281/zenodo.4327979)
+
 ## Description of files
 
 Data File:
