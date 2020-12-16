@@ -3,10 +3,9 @@ This code contains various MATLAB files to generate the data in the manuscript: 
 
 ## Description of files
 
-Data Files:
+Data File:
 
 * 'workspace_N3-9.mat' contains the weak selection fixation probabilities and adjacency matrices for all small graphs of size N = 3 through 9, under temperature and uniform initialization.
-* 'workspace_N10.mat' contains the weak selection fixation probabilities and adjacency matrices for all small graphs of size N = 10, under temperature and uniform initialization.
 
 Source Files:
 
