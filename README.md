@@ -5,11 +5,11 @@ This code contains various MATLAB files to generate the data in the manuscript: 
 
 ## Description of files
 
-Data File:
+#### Data File:
 
 * 'workspace_N3-9.mat' contains the weak selection fixation probabilities and adjacency matrices for all small graphs of size N = 3 through 9, under temperature and uniform initialization.
 
-Source Files:
+#### Source Files:
 
 * 'WeakSelectionFixProb.m' is a function that calculates the weak selection fixation probability for the given graph under temperature or uniform initialization. It returns rhocircle and rhoprime using the formulas provided in the main text.
 * 'create_ER_Graph.m' is a function that creates a random Erdos-Reyni graph for the given graph size and link probability.
@@ -26,6 +26,10 @@ Source Files:
 * 'OptimalBalloon.m' is a function that finds the Balloon graph of a given graph size with the smallest ratio rhoprime/rhocircle. It depends on the functions WeakSelectionFixProb.m and Balloon.m.
 * 'BalloonStar.m' is a function that creates a Balloon-Star graph of a given number of vertices in the hub, path, and star parts of the graph.
 * 'OptimalBalloonStar.m' is a function that finds the Balloon-Star graph of a given graph size with the smallest ratio rhoprime/rhocircle. It depends on the functions WeakSelectionFixProb.m and BalloonStar.m.
+* 'ConvertGraphToMatrix.m' is a function that outputs an array of adjacency matrices for all graphs provided by the text infile.
+
+#### Note about Graphs of Size 10
+To obtain adjacency matrices for the nearly 12 million simple connected graphs of size 10, first download the graph6 files from [Brendan McKay's website](http://users.cecs.anu.edu.au/~bdm/data/graphs.html).  Then use the [showg](http://users.cecs.anu.edu.au/~bdm/data/formats.html) executable with -a, the graph6 infile and a text outfile. This text outfile can then serve as the input to the ConvertGraphToMatrix.m function, whose output is an array of adjacency matrices.  Finally, use WeakSelectionFixProb.m to find the weak selection fixation probabilities for any graph given its adjacency matrix. 
 
 ## Usage
 The main MATLAB script files can be directly run as long as their helper functions have been downloaded.
