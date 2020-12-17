@@ -1,19 +1,15 @@
-% Script file to store the adjacency matrices of all simple, connected graphs
-% of size N as a MATALB array called W
-% The file graph.txt contains the adjacency matrix data, which was produced from
-% executing showg on an infile in graph6 format
+function W = ConvertGraphToMatrix(N,txtfile)
+% Function to store the adjacency matrices of all simple, connected graphs of size N as a MATALB array called W
+% INPUT N is the size of the graph
+% INPUT txtfile is a text file that contains adjacency matrix data for all simple, connected graphs of size N
+% this file should be produced from executing showg on an infile in graph6 format
 % found on Brendan McKay's website: http://users.cecs.anu.edu.au/~bdm/data/formats.html
-
-clear;
-
-%%%%%% Graph Size - user should change this value
-N = 4;  
-%%%%%%
+% OUTPUT W is an array of size N x N x (number of graphs)
 
 row = 0;
 graphnum = 1; 
 
-fid = fopen('graphs.txt');
+fid = fopen(txtfile);
 tline = fgetl(fid);
 
  while ischar(tline)
