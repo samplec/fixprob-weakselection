@@ -28,11 +28,11 @@ This code contains various MATLAB files to generate the data in the manuscript: 
 * 'OptimalBalloonStar.m' is a function that finds the Balloon-Star graph of a given graph size with the smallest ratio rhoprime/rhocircle. It depends on the functions WeakSelectionFixProb.m and BalloonStar.m.
 * 'ConvertGraphToMatrix.m' is a function that outputs an array of adjacency matrices for all graphs provided by the text infile.
 
-#### Note about Graphs of Size 10
-To obtain adjacency matrices for the nearly 12 million simple connected graphs of size 10, first download the graph6 files from [Brendan McKay's website](http://users.cecs.anu.edu.au/~bdm/data/graphs.html).  Then use the [showg](http://users.cecs.anu.edu.au/~bdm/data/formats.html) executable with -a, the graph6 infile and a text outfile. This text outfile can then serve as the input to the ConvertGraphToMatrix.m function, whose output is an array of adjacency matrices.  Finally, use WeakSelectionFixProb.m to find the weak selection fixation probabilities for any graph given its adjacency matrix. 
-
 ## Usage
 The main MATLAB script files can be directly run as long as their helper functions have been downloaded.
+
+#### Note about Graphs of Size 10
+To obtain adjacency matrices for the nearly 12 million simple connected graphs of size 10, first download the graph6 files from [Brendan McKay's website](http://users.cecs.anu.edu.au/~bdm/data/graphs.html).  Then use the [showg](http://users.cecs.anu.edu.au/~bdm/data/formats.html) executable with -a, the graph6 infile and a text outfile. This text outfile can then serve as the input to the ConvertGraphToMatrix.m function, whose output is an array of adjacency matrices.  Finally, use WeakSelectionFixProb.m to find the weak selection fixation probabilities for any graph given its adjacency matrix. 
 
 ## License
 See LICENSE for details.
